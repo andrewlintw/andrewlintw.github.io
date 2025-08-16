@@ -391,6 +391,39 @@ body {
     box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
 }
 
+.cute-drawing-footer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links a {
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.footer-links a:hover {
+    background-color: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+}
+
+.separator {
+    width: 2px;
+    height: 24px;
+    background-color: #666;
+    margin: 0 10px;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .container {
@@ -433,13 +466,6 @@ body {
         height: 80px;
         font-size: 30px;
     }
-}
-
-/* Cute drawing placeholders - you can replace these with actual drawings */
-.drawing-placeholder {
-    color: white;
-    font-weight: bold;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 /* Smooth scrolling for navigation */
