@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: '寧靜海'
+subtitle: 'andrewlintw06 的隨筆'
+description: '故不積跬步，無以至千里'
 keywords:
-author: John Doe
-language: en
+author: andrewlintw06
+language: zh-TW
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://andrewlintw.github.io/project
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -102,3 +102,8 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# config of hexo-renderer-pandoc
+pandoc:
+  args:
+    - --mathjax

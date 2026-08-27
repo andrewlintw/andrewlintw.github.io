@@ -1,0 +1,73 @@
+% preamble.tex — MathJax-safe shorthands, converted from myshorthand.sty
+% (place this at scaffolds/preamble.tex in your Hexo project)
+
+% ---- Paired delimiters ----
+% mathtools' \DeclarePairedDelimiter(X) has no MathJax equivalent, so these
+% are rewritten as plain \newcommand using \left...\right / \middle, which
+% MathJax's core + ams packages support natively.
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\eval}[1]{\left. #1 \right\rvert}
+\newcommand{\ket}[1]{\left\lvert #1 \right\rangle}
+\newcommand{\bra}[1]{\left\langle #1 \right\rvert}
+\newcommand{\braket}[2]{\left\langle #1 \,\middle|\, #2 \right\rangle}
+\newcommand{\braHket}[3]{\left\langle #1 \,\middle|\, #2 \,\middle|\, #3 \right\rangle}
+\newcommand{\Set}[2]{\left\{ #1 \,\middle|\, #2 \right\}}
+
+% ---- Number sets ----
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\rationals}{\mathbb{Q}}
+\newcommand{\integers}{\mathbb{Z}}
+\newcommand{\naturals}{\mathbb{N}}
+\newcommand{\complex}{\mathbb{C}}
+
+% ---- Transforms ----
+\newcommand{\fourier}[1]{\mathcal{F}\left\{#1\right\}}
+\newcommand{\invfourier}[1]{\mathcal{F}^{-1}\left\{#1\right\}}
+\newcommand{\laplace}[1]{\mathcal{L}\left\{#1\right\}}
+\newcommand{\invlaplace}[1]{\mathcal{L}^{-1}\left\{#1\right\}}
+
+% ---- Probability / statistics ----
+% \ensuremath dropped: MathJax macros always expand inside math mode already,
+% so it's a redundant no-op here.
+\newcommand{\expectation}[2][]{\mathbb{E}_{#1}\left[#2\right]}
+\newcommand{\variance}[2][]{\mathbb{V}_{#1}\left[#2\right]}
+\DeclareMathOperator{\covar}{Cov}
+
+% ---- Common functions ----
+\DeclareMathOperator{\rect}{rect}
+\DeclareMathOperator{\tri}{tri}
+\DeclareMathOperator{\sinc}{sinc}
+\DeclareMathOperator{\sgn}{sgn}
+% \char"0428 (raw font glyph access) isn't supported by MathJax; \unicode{}
+% is MathJax's built-in equivalent for inserting an arbitrary code point.
+\newcommand{\Sha}{\unicode{x0428}}
+\newcommand{\comb}[1]{\Sha_{#1}}
+
+% ---- Operators ----
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\divv}{div}
+\DeclareMathOperator{\curl}{curl}
+\DeclareMathOperator{\idd}{id}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\ev}{ev}
+\DeclareMathOperator{\tr}{tr}
+\newcommand{\iso}{\simeq}
+\newcommand{\hodge}{\mathord{\star}}
+\newcommand{\codiff}{\mathord{\delta}}
+\newcommand{\LdR}{\mathord{\Delta}}
+\newcommand{\dAlembert}{\mathord{\Box}}
+\newcommand{\iprod}{\mathbin{\lrcorner}}
+\newcommand{\indUp}[1]{{#1}^{\sharp}}
+\newcommand{\indDown}[1]{{#1}^{\flat}}
+\newcommand{\transpose}[1]{{#1}^{\top}}
+\newcommand{\hermitian}[1]{{#1}^{\dagger}}
+
+% ---- Miscellaneous symbols and shorthands ----
+\renewcommand{\Re}{\mathfrak{Re}}
+\renewcommand{\Im}{\mathfrak{Im}}
+\newcommand{\powerfactor}{\mathrm{pf}}
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
+\newcommand{\lalg}[1]{\mathfrak{#1}}
